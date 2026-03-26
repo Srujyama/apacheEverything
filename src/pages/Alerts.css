@@ -1,0 +1,196 @@
+.alerts-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.alerts-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.severity-filters {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-tertiary);
+}
+
+.severity-filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: all var(--transition-fast);
+}
+.severity-filter-btn:hover {
+  border-color: var(--border-secondary);
+  color: var(--text-primary);
+}
+.severity-filter-btn.active {
+  background: var(--accent-bg);
+  border-color: var(--accent-border);
+  color: var(--accent);
+}
+.severity-filter-btn.active.filter-emergency {
+  background: var(--severity-emergency-bg);
+  border-color: var(--severity-emergency-border);
+  color: var(--severity-emergency);
+}
+.severity-filter-btn.active.filter-critical {
+  background: var(--severity-critical-bg);
+  border-color: var(--severity-critical-border);
+  color: var(--severity-critical);
+}
+.severity-filter-btn.active.filter-warning {
+  background: var(--severity-warning-bg);
+  border-color: var(--severity-warning-border);
+  color: var(--severity-warning);
+}
+.severity-filter-btn.active.filter-info {
+  background: var(--severity-info-bg);
+  border-color: var(--severity-info-border);
+  color: var(--severity-info);
+}
+
+.filter-count {
+  background: var(--bg-tertiary);
+  padding: 0 5px;
+  border-radius: 9999px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.alert-total {
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+/* Alert Cards */
+.alerts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.alert-card {
+  display: flex;
+  gap: 12px;
+  padding: 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-left: 3px solid transparent;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+.alert-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-secondary);
+}
+.alert-card.severity-emergency { border-left-color: var(--severity-emergency); }
+.alert-card.severity-critical { border-left-color: var(--severity-critical); }
+.alert-card.severity-warning { border-left-color: var(--severity-warning); }
+.alert-card.severity-info { border-left-color: var(--severity-info); }
+
+.alert-card-indicator {
+  padding-top: 4px;
+  flex-shrink: 0;
+}
+
+.alert-card-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.alert-card-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+
+.alert-source-badge {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 10px;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 2px 6px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+}
+
+.alert-status-badge {
+  font-size: 10px;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.alert-time {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: var(--text-tertiary);
+  margin-left: auto;
+}
+
+.alert-card-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-heading);
+  line-height: 1.4;
+}
+
+/* Expanded Alert */
+.alert-card-expanded {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-primary);
+}
+
+.alert-description {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.alert-detail-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+.alert-detail {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+.alert-tags {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-tertiary);
+}
+.alert-tags code {
+  font-size: 10px;
+}

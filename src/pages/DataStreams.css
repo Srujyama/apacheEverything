@@ -1,0 +1,201 @@
+.data-streams {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stream-tabs {
+  display: flex;
+  gap: 4px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  padding: 3px;
+}
+
+.stream-tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+.stream-tab:hover { color: var(--text-primary); }
+.stream-tab.active {
+  background: var(--accent-bg);
+  color: var(--accent);
+}
+
+.streams-chart-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Table */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+.data-table th {
+  text-align: left;
+  padding: 10px 12px;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--border-primary);
+}
+.data-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border-primary);
+  color: var(--text-primary);
+}
+.data-table tr:hover td {
+  background: var(--bg-tertiary);
+}
+.data-table .row-selected td {
+  background: var(--accent-bg);
+}
+.text-secondary {
+  color: var(--text-secondary);
+  font-size: 11px;
+}
+
+.btn-sm {
+  padding: 4px 10px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-sm);
+  color: var(--accent);
+  font-size: 11px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+.btn-sm:hover {
+  background: var(--accent-bg);
+  border-color: var(--accent-border);
+}
+
+/* Message Stream */
+.message-stream {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.message-item {
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-md);
+  padding: 10px;
+}
+
+.message-meta {
+  display: flex;
+  gap: 12px;
+  font-size: 10px;
+  color: var(--text-tertiary);
+  margin-bottom: 6px;
+}
+
+.message-payload {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-primary);
+  background: var(--bg-input);
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  margin: 0;
+  overflow-x: auto;
+  line-height: 1.6;
+}
+
+/* Spark Jobs */
+.spark-jobs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.spark-job-card {
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  border-left: 3px solid var(--border-primary);
+}
+.spark-job-card.severity-border-running { border-left-color: var(--status-good); }
+.spark-job-card.severity-border-completed { border-left-color: var(--accent); }
+.spark-job-card.severity-border-failed { border-left-color: var(--severity-critical); }
+.spark-job-card.severity-border-pending { border-left-color: var(--text-tertiary); }
+
+.spark-job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.spark-job-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-heading);
+}
+
+.spark-job-id {
+  font-size: 10px;
+  color: var(--text-tertiary);
+}
+
+.spark-job-desc {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.spark-job-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 11px;
+  color: var(--text-tertiary);
+  margin-bottom: 6px;
+}
+.spark-job-meta strong {
+  color: var(--text-primary);
+}
+
+.spark-job-topics {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.spark-job-topics code {
+  font-size: 10px;
+}
+
+.spark-job-progress {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--spark-accent);
+  margin-top: 4px;
+  display: block;
+}
